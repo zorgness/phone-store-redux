@@ -1,6 +1,8 @@
-import { configureStore} from "redux";
-import phoneReducer from "../redux/phone/reducerPhone"
+import { configureStore } from '@reduxjs/toolkit'
+import phoneReducer from './phone/reducerPhone'
 
-const store = configureStore(phoneReducer);
+const store = configureStore({
+  reducer:  phoneReducer
+  });
 
 export default store;

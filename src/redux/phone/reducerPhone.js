@@ -1,4 +1,6 @@
 import { BUY_PHONE } from "./type";
+// import { createSlice } from '@reduxjs/toolkit'
+
 const initialStatePhone = {
 
   phones: 5
@@ -18,3 +20,20 @@ const phoneReducer = (state=initialStatePhone, action) => {
 
   }
 }
+
+export default phoneReducer;
+
+// export const phoneSlice = createSlice({
+//   name: BUY_PHONE,
+//   initialState: {
+
+//       phones: 5
+//     },
+//     reducers: {
+//         decrement: state => state -= 1
+//     }
+
+// })
+
+// export const { decrement } = phoneSlice.actions
+// export default phoneSlice.reducer
