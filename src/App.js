@@ -12,7 +12,7 @@ function App() {
     <Provider store={store}>
 
 
-        <PhoneComponent />
+        <PhoneComponent warning={"out of stock"} />
         <TabletComponent />
         <TvComponent />
 
