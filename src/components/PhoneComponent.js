@@ -4,10 +4,14 @@ import Phone from '../images/phone.png'
 import { useSelector, useDispatch } from 'react-redux'
 import { buyPhone } from '../redux/phone/actionPhone'
 
-const PhoneComponent = () => {
+const PhoneComponent = (props) => {
+
+
 
   const count = useSelector(state => state.phones)
   const dispatch = useDispatch()
+
+  const available = count < 1 ? props.warning : count;
 
 
   return (
@@ -15,7 +19,7 @@ const PhoneComponent = () => {
 
       <img src={Phone} alt="phone" />
 
-      <p>Available: <span id="count">{count}</span> </p>
+      <p>Available: <span id="count">{available}</span> </p>
 
       <button onClick={() => dispatch(buyPhone())}>Buy phone</button>
 
