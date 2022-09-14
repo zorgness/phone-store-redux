@@ -1,7 +1,7 @@
 .section-one {
   margin: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -26,7 +26,7 @@ img {
 
 #count, #count-tab, #count-tv {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .container p {
@@ -45,4 +45,12 @@ button {
 button:hover {
   border: 1px solid rgb(54, 4, 54);
   background: rgb(54, 4, 54);
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+}
+.btnContainer input {
+  width: 28px;
 }

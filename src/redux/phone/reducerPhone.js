@@ -11,29 +11,14 @@ const phoneReducer = (state=initialStatePhone, action) => {
     case BUY_PHONE:
       return {
         ...state,
-        phones: state.phones - 1
+        phones: state.phones - action.payload
       }
 
 
 
-    default: return initialStatePhone;
+    default: return state;
 
   }
 }
 
 export default phoneReducer;
-
-// export const phoneSlice = createSlice({
-//   name: BUY_PHONE,
-//   initialState: {
-
-//       phones: 5
-//     },
-//     reducers: {
-//         decrement: state => state -= 1
-//     }
-
-// })
-
-// export const { decrement } = phoneSlice.actions
-// export default phoneSlice.reducer
