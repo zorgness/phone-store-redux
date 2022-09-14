@@ -1,10 +1,9 @@
 import React, {useState} from 'react'
-// import { connect } from 'react-redux'
 import { useSelector, useDispatch } from 'react-redux'
 import Phone from '../images/phone.png'
 import { buyPhone } from '../redux/phone/actionPhone'
 
-const PhoneComponent = props => {
+const PhoneContainer = props => {
 
 
   const [totalPhone, setTotalPhone] = useState(1)
@@ -35,22 +34,4 @@ const PhoneComponent = props => {
   )
 }
 
-export default PhoneComponent
-
-
-// const mapStateToProps = (state) => {
-
-//   return {
-//     phones: state.phone.phones
-
-//   }
-// }
-
-// const mapDispatchToProps = (dispatch) => {
-
-//   return {
-//     buyPhone: totalPhone => dispatch(buyPhone(totalPhone))
-//   }
-// }
-
-// export default connect(mapStateToProps, mapDispatchToProps )(PhoneComponent)
+export default PhoneContainer

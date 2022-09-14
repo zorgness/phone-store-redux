@@ -1,25 +1,14 @@
-// import { configureStore} from '@reduxjs/toolkit';
-import { createStore, combineReducers } from 'redux';
-import phoneReducer from './phone/reducerPhone';
+import { configureStore } from '@reduxjs/toolkit';
+import phoneReducer from './phone/phoneReducer';
 import tvReducer from './tv/tvReducer';
+import commentReducer from './comment/commentReducer';
 
 
-
-const rootReducer = combineReducers(
-  {
-   phone: phoneReducer,
-   tv: tvReducer
-  })
-
-
-const store = createStore(rootReducer);
-
-
-
-// const store = configureStore({
-//   reducer: {
-//     phone: phoneReducer,
-//      tv: tvReducer
-//    }});
+const store = configureStore({
+  reducer: {
+    phone: phoneReducer,
+     tv: tvReducer,
+     comment: commentReducer
+   }});
 
 export default store;
