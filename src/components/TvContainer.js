@@ -1,10 +1,9 @@
 import React, {useState} from 'react'
-// import { connect } from 'react-redux'
 import { useSelector, useDispatch } from 'react-redux'
 import Tv from '../images/tv.png'
 import { buyTv} from '../redux/tv/actionTv'
 
-const TvComponent = props => {
+const TvContainer = props => {
 
   const [totalTv, setTotalTv] = useState(1)
 
@@ -26,9 +25,9 @@ const TvComponent = props => {
 
       <div className="btnContainer">
 
-        <button id="button" onClick={() => dispatch(buyTv(totalTv))}>Buy phone</button>
+          <button id="button" onClick={() => dispatch(buyTv(totalTv))}>Buy tv</button>
 
-        <input type="text" value={totalTv} onChange={e => setTotalTv(e.target.value)} />
+          <input type="text" value={totalTv} onChange={e => setTotalTv(e.target.value)} />
 
       </div>
 
@@ -37,21 +36,4 @@ const TvComponent = props => {
   )
 }
 
-export default TvComponent
-
-
-// const mapStateToProps = (state) => {
-
-//   return {
-//     tvs: state.tv.tvs
-//   }
-// }
-
-// const mapDispatchToProps = (dispatch) => {
-
-//   return {
-//     buyTv: totalTv => dispatch(buyTv(totalTv))
-//   }
-// }
-
-// export default connect(mapStateToProps, mapDispatchToProps )(TvComponent)
+export default TvContainer

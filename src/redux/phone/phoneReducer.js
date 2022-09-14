@@ -14,8 +14,6 @@ const phoneReducer = (state=initialStatePhone, action) => {
         phones: state.phones - action.payload
       }
 
-
-
     default: return state;
 
   }
