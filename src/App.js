@@ -2,7 +2,7 @@ import './App.css';
 import PhoneContainer from './components/PhoneContainer';
 import TvContainer from './components/TvContainer';
 import CommentContainer from './components/CommentContainer';
-import UserComponent from './components/UserComponent';
+// import UserComponent from './components/UserComponent';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 
@@ -18,7 +18,7 @@ function App() {
 
           <TvContainer warning={"out of stock"} />
 
-          <UserComponent />
+          {/* <UserComponent /> */}
 
           <CommentContainer />
 
